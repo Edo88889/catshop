@@ -1,17 +1,24 @@
-import {useEffect, useState} from "react";
+import {useEffect} from "react";
 import {UrlCat} from "../utils/constants";
-
-const Cats = () => {
-    const [data, setData] = useState([])
-    console.log(data)
+import {Data} from "../../Store/Action/CatAction";
+import {useDispatch} from "react-redux";
+import axios from "axios";
+import CatDraw from "./CatDraw";
+import Routing from "../Home/Routing";
+const Index = () => {
+    const dispatch = useDispatch()
     const  gettingData  = async () => {
-        const resp = await fetch(UrlCat)
-        const result = await resp.json()
-        setData(result)
-        console.log(result)
+        const resp = await axios.get(UrlCat)
+        dispatch(Data(resp.data))
     }
     useEffect(() => {
         gettingData()
     },[])
+    return(
+        <>
+            <Routing/>
+            <CatDraw/>
+        </>
+    )
 }
-export default Cats
+export default Index

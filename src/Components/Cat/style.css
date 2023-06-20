@@ -1,0 +1,45 @@
+.container{
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+.child-container{
+    position: relative;
+margin-left: 50px;
+}
+.btn{
+    padding: 7px 40px;
+    border: none;
+    border-radius: 15px;
+    background: violet;
+    color: black;
+}
+.img{
+    width: 250px;
+    height: 250px;
+}
+.rout{
+    margin-left: 20px;
+    padding: 3px 18px;
+    background: dodgerblue;
+    color: white;
+    border-radius: 10px;
+    text-decoration: none;
+}
+.totalprice{
+    position: absolute;
+    left: 50%;
+    top: -20px;
+}
+.btnLike{
+   position: absolute;
+   padding: 3px 13px;
+    left: 80%;
+    background: chocolate;
+    color: white;
+    border: none;
+    border-radius: 13px;
+}
